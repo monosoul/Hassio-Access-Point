@@ -28,6 +28,7 @@ options:
   allow_mac_addresses: []
   deny_mac_addresses: []
   debug: 0
+  ht_capab: "[HT40][SHORT-GI-20][DSSS_CCK-40]"
   hostapd_config_override: []
   client_internet_access: false
   client_dns_override: []
@@ -49,6 +50,7 @@ schema:
   deny_mac_addresses:
     - match(^([0-9a-fA-F]{2}:){4}[0-9a-fA-F]{2})?
   debug: int(0,2)
+  ht_capab: match(^(\[[A-Z0-9][A-Z0-9_+-]*\])+$)
   hostapd_config_override:
     - str?
   client_internet_access: bool
